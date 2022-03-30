@@ -52,7 +52,7 @@ public class ProbarFigura {
 		System.out.println(resourceBundle_en_US.getString("areaT") + t.area());
 
 		System.out.println("\n--------\n");
-		System.out.println("Se aumenta el area del círculo en 5cm:\n");
+		System.out.println("Se aumenta el radio del círculo 5cm y se calcula el nuevo área:\n");
 		c.aumentarArea(5);
 		System.out.println(resourceBundle.getString("areaC") + c.area());
 
@@ -62,14 +62,19 @@ public class ProbarFigura {
 		System.out.println(resourceBundle.getString("areaT") + listafiguras.get(1).area());
 		
 		System.out.println("\n--------\n");
-		System.out.println("Se ejecuta desde el ArralyList el método aumentarArea() del Circulo:\n");
+		System.out.println("Se ejecuta desde el ArralyList el método aumentarArea() del Circulo y se aumenta el área en 5cm:\n");
 
 		System.out.println(resourceBundle.getString("areaNuevaC") + ((Circulo)listafiguras.get(2)).aumentarArea(5));
 
 		System.out.println("\n--------\n");
+		System.out.println("Se ejecuta desde el ArralyList el método cambiarColor() del Triángulo\nhaciendo casting ya que este método no es compartido por todas las clases\ny se traduce a inglés:\n");
+
+		System.out.println(resourceBundle_en_US.getString("colorNuevoC") + ((Triangulo)listafiguras.get(0)).cambiarColor("light blue"));
+
+		System.out.println("\n--------\n");
 		System.out.println("Se ejecuta desde el ArralyList el método aumentarArea() del Circulo\nbuscando el método con un FOR:\n");
 
-		System.out.println(resourceBundle_en_US.getString("areaNuevaC") + ((Circulo)listafiguras.get(2)).aumentarArea(5));
+		System.out.println(resourceBundle_en_US.getString("colorNuevoC") + ((Triangulo)listafiguras.get(0)).cambiarColor("light blue"));
 
 	}
 }

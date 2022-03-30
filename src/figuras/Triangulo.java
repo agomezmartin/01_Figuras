@@ -16,6 +16,10 @@ public class Triangulo extends Figura {
 		return area;
 	}
 	
+	public String cambiarColor(String color) {
+		return color;
+	}
+	
 	public String toString() {
 		return "El triángulo es:\n" + super.toString() + "\n Área: " + this.area();
 	}	
