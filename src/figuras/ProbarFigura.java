@@ -57,11 +57,19 @@ public class ProbarFigura {
 		System.out.println(resourceBundle.getString("areaC") + c.area());
 
 		System.out.println("\n--------\n");
-		System.out.println("Se ejecuta el método toString() desde en ArralyList:\n");
+		System.out.println("Se ejecuta desde el ArralyList el método Area() del Circulo:\n");
 
-		System.out.println(listafiguras.get(2));
+		System.out.println(resourceBundle.getString("areaT") + listafiguras.get(1).area());
 		
+		System.out.println("\n--------\n");
+		System.out.println("Se ejecuta desde el ArralyList el método aumentarArea() del Circulo:\n");
 
+		System.out.println(resourceBundle.getString("areaNuevaC") + ((Circulo)listafiguras.get(2)).aumentarArea(5));
+
+		System.out.println("\n--------\n");
+		System.out.println("Se ejecuta desde el ArralyList el método aumentarArea() del Circulo\nbuscando el método con un FOR:\n");
+
+		System.out.println(resourceBundle_en_US.getString("areaNuevaC") + ((Circulo)listafiguras.get(2)).aumentarArea(5));
 
 	}
 }
